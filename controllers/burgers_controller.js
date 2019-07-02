@@ -4,7 +4,7 @@ var express = require("express");
 var burger = require("../models/burger.js");
 
 // create a router
-var router = express.router();
+var router = express.Router();
 
 // create routers for the app
 
