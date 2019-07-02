@@ -69,10 +69,12 @@ var orm = {
 
     updateOne : function(tableName, objectColVals,condition,cb){
         var queryString = "UPDATE " + tableName;
-        queryString += "SET ";
+        queryString += " SET ";
         queryString += objToSql(objectColVals);
-        queryString += "WHERE";
+        queryString += " WHERE ";
         queryString += condition;
+
+        console.log(queryString);
 
         connection.query(queryString,function(err,result){
             if(err){

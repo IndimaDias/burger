@@ -68,3 +68,16 @@ body{
 .burgersRow{
     border: solid white;
 }
+
+.btnDevour{
+    right: 0;
+}
+
+.burgerList{
+    padding: 10px;
+   
+}
+
+.tagList{
+    width:100%;
+}

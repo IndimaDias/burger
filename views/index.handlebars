@@ -35,11 +35,12 @@
                     </div>
 
                     <div class="row">
-                        <ul class="text-white">
+                        <ul class = "tagList">
                             {{#each burgers}}
                                 {{#unless devoured}}
-                                   <li class="text-white">
-                                       {{burger_name}}     
+                                   <li class="text-white burgerList">
+                                       {{burger_name}} 
+                                       <button class=" btnDevour btn btn-white btn-sm" data-id="{{id}}">Devour It</button>     
                                    </li>
                                     
                                 {{/unless}}
