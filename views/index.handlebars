@@ -35,12 +35,15 @@
                     </div>
 
                     <div class="row">
-                        <ul>
-                            {{!-- {{#each burgers}}
+                        <ul class="text-white">
+                            {{#each burgers}}
                                 {{#unless devoured}}
-                                    {{>burgers}}
+                                   <li class="text-white">
+                                       {{burger_name}}     
+                                   </li>
+                                    
                                 {{/unless}}
-                            {{/each}}         --}}
+                            {{/each}}        
                         </ul>
                     </div>
                 </div>
