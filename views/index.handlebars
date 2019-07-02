@@ -27,7 +27,7 @@
             </div>
 
             {{!-- This section is to list burgers --}}
-            <div class="row burgersRow">
+            <div class="row">
                 {{!-- section for bugers added but not devoured --}}
                 <div class="col-lg-6 burgersRow">
                     <div class="row">
@@ -52,11 +52,27 @@
                 {{!-- This section is for devoured burgers --}}
                 <div class="col-lg-6 burgersRow">  
                     <div class="row">
-                        <h5 class = "heading5">Devoured!!!</h5>
+                        <h5 class = "heading5">Devoured!!!</h5>                    
+                    </div>    
+                    
+                    <div class="row">
+                        <ul class = "tagList">
+                            {{#each burgers}}
+                                {{#if devoured}}
+                                   <li class="text-white burgerList">
+                                       {{burger_name}} 
+                                       <button class=" btnDelete btn btn-white btn-sm" data-id="{{id}}">Delete</button>     
+                                   </li>
+                                    
+                                {{/if}}
+                            {{/each}}        
+                        </ul>
                     </div>
 
                 </div>
+
             </div>
         </div>
-    </div>    
+    </div>
+   
 </div>
