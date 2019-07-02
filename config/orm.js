@@ -52,11 +52,12 @@ var orm = {
 
     insertOne : function (tableName,colNames,colValues,cb){
         var queryString = "INSERT INTO " + tableName;
-        queryString += " ( " + colNames.toString() + ")";
-        queryString += "VALUES (" + printQuestionMarks(colValues.lenght) + ")";
+        queryString += " ( " + colNames.toString() + " ) ";
+        queryString += "VALUES (" + printQuestionMarks(colValues.length) + " ) ";
 
-
-        connection.query(queryString , [colValues], function(err,result){
+        console.log(queryString);
+        console.log(colValues);
+        connection.query(queryString , colValues, function(err,result){
             if(err){
                 throw err;
             }
