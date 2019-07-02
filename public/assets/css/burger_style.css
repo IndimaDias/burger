@@ -4,10 +4,34 @@ body{
 
 .imgBurger{
     height: 100%;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-right: 0;
 }
 
 .container{
     height: auto;
 }
+
+.banner{
+    width: 50%;
+    margin: auto;
+    height: 120px;
+    background-image: url("https://png2.kisspng.com/sh/b9b37510786bbcd2b1aec90591833817/L0KzQYm3VsA2N5dqfZH0aYP2gLBuTgdmal5nedD3ZYKwc73wkL1ieqUyet5qY3uwcbBrTgdpcaVqRdRqbn7ogn68gsE3bGQ9e6lvZUC5SHAAVMI0QGc3SqMAMki1QoO9UMQ2OmQ9RuJ3Zx==/kisspng-web-banner-clip-art-black-and-white-banner-5b16d38c7fe068.7423862215282226045238.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.bannerImg{
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    width: 100%;
+    
+  }
