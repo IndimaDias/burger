@@ -1,6 +1,6 @@
 var connection = require("./connection.js");
 
-// Helper function for SQL syntax.
+// Helper function for SQL syntax. from Cats inclass activity
 // Let's say we want to pass 3 values into the mySQL query.
 // In order to write the query, we need 3 question marks.
 // The above helper function loops through and creates an array of question marks - ["?", "?", "?"] - and turns it into a string.
@@ -55,8 +55,7 @@ var orm = {
         queryString += " ( " + colNames.toString() + " ) ";
         queryString += "VALUES (" + printQuestionMarks(colValues.length) + " ) ";
 
-        console.log(queryString);
-        console.log(colValues);
+       
         connection.query(queryString , colValues, function(err,result){
             if(err){
                 throw err;
@@ -74,7 +73,7 @@ var orm = {
         queryString += " WHERE ";
         queryString += condition;
 
-        console.log(queryString);
+       
 
         connection.query(queryString,function(err,result){
             if(err){
@@ -83,6 +82,21 @@ var orm = {
 
             cb(result);
 
+        });
+    },
+
+    deleteOne : function(tableName,condition,cb){
+        var queryString = "DELETE FROM " + tableName;
+        queryString += " WHERE ";
+        queryString += condition;
+
+        
+        connection.query(queryString,function(err,result){
+            if (err){
+                throw err;
+            }
+
+            cb(result);
         });
     }
 }
